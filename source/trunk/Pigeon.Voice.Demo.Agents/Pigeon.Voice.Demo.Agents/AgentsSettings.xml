@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AgentsSettings>
+  <DatabaseConnectionString>Data Source=PAULKOLOZSV38D1\MSSQLEXPRESS2012;Initial Catalog=PigeonVoiceDemo;Persist Security Info=True;User ID=sa;Password=27830529</DatabaseConnectionString>
+  <DatabaseCommandTimeout>30000</DatabaseCommandTimeout>
+</AgentsSettings>

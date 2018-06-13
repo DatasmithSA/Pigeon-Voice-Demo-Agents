@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3239CA57-EE0B-4C32-97CF-10FAE2C28DA5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pigeon.Voice.Demo.Agents</RootNamespace>
+    <AssemblyName>Pigeon.Voice.Demo.Agents</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\Program Files %28x86%29\Datasmith\Pigeon Voice Server\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Figlut.Server.Toolkit45">
+      <HintPath>..\SDK\Figlut.Server.Toolkit.1.2.1.12.NET.4.5. 2018-06-01\Figlut.Server.Toolkit45.dll</HintPath>
+    </Reference>
+    <Reference Include="Pigeon.Voice.SDK, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SDK\Pigeon.Voice.SDK.1.0.2-2018-06-13\Pigeon.Voice.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Pigeon.Voice.SDK.WinForms.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SDK\Pigeon.Voice.SDK.1.0.2-2018-06-13\Pigeon.Voice.SDK.WinForms.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\AgentsGlobals.cs" />
+    <Compile Include="Configuration\AgentsSettings.cs" />
+    <Compile Include="Data\DB\AgentsDBContext.cs" />
+    <Compile Include="Data\ORM\PigeonVoiceDemo.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PigeonVoiceDemo.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SocketAgents\LutLogOffAgent.cs" />
+    <Compile Include="SocketAgents\LutLoginAgent.cs" />
+    <Compile Include="SocketAgents\LutPickItemsAgent.cs" />
+    <Compile Include="SocketAgents\LutPickListAgent.cs" />
+    <Compile Include="SocketAgents\OdrConfirmPickAgent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\ORM\PigeonVoiceDemo.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PigeonVoiceDemo.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgentsSettings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\ORM\PigeonVoiceDemo.dbml.layout">
+      <DependentUpon>PigeonVoiceDemo.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

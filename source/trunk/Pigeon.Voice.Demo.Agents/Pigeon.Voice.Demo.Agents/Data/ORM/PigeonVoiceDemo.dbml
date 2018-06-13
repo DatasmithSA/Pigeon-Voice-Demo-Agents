@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PigeonVoiceDemo" Class="PigeonVoiceDemoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PAULKOLOZSV38D1\MSSQLEXPRESS2012;Initial Catalog=PigeonVoiceDemo;Persist Security Info=True;User ID=sa" SettingsObjectName="Pigeon.Voice.Demo.Agents.Properties.Settings" SettingsPropertyName="PigeonVoiceDemoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PickItem" Member="PickItems">
+    <Type Name="PickItem">
+      <Column Name="PickItemId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PickListId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Sku" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CheckDigits" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QuantityToPick" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QuantityPicked" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PickStatusCode" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PickedByUserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PickedByUserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="PickList_PickItem" Member="PickList" ThisKey="PickListId" OtherKey="PickListId" Type="PickList" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PickList" Member="PickLists">
+    <Type Name="PickList">
+      <Column Name="PickListId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PickListNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Picked" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="PickList_PickItem" Member="PickItems" ThisKey="PickListId" OtherKey="PickListId" Type="PickItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoggedIn" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
