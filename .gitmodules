@@ -1,0 +1,3 @@
+[submodule "Pigeon-Voice-Training.wiki"]
+	path = Pigeon-Voice-Training.wiki
+	url = git://github.com/DatasmithSA/Pigeon-Voice-Training.wiki
