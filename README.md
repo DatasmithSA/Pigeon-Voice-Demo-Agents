@@ -1,2 +1,2 @@
-# Pigeon-Voice-Demo-Agents
-Pigeon Voice Demo Agents
+# Pigeon-Voice-Training
+Pigeon Voice Training
