@@ -1,6 +1,6 @@
 ### Pigeon Voice Server
 
-[[/Pigeon-Voice-Training.wiki/images/Pigeon-Logo.png]]
+[Pigeon Voice Server](/docs/images/Pigeon-Logo.png)
 
 The **Pigeon Voice Training** repository provides source code samples, demo voice applications and documentation to assist Datasmith partners and customers in getting started with Datasmith's **Pigeon Voice Server**.
 
@@ -42,4 +42,4 @@ For each given Voice solution to an end customer, the following custom software 
 N.B. Due to Vocollect wanting to maintain a high standard of implementations, only Vocollect certified implementation partners that have gone through the Vocollect University training are allowed to develop, install and support these Voice applications.
 * **Server Integration**: the voice application will require to download certain data from the server as well as to send data back to the server e.g. a list of picks to be completed for an order, or for a pick confirmation to be sent back to the server. Integration engineers will be required to write code in order to handle the requests from the Vocollect devices, query the WMS and provide responses back to the devices. The formats of messages being sent to and from the devices are proprietary to Vocollect and therefore integrators that are not Vocollect VARs will not have the necessary knowledge to complete the integration. Therefore it is left up to Vocollect certified VARs to perform the integrations. The Pigeon Voice Server facilitates in this integration development effort by providing an easy and flexible way to integrate Vocollect voice applications into any backend system (e.g. WMS, ERP etc.) without having to deal with the technical complexities and/or requiring any knowledge of the Vocollect proprietary formats of messages being sent to and from Vocollect devices. The Pigen Voice Server allows any integration engineer and/or WMS provider to easily develop a voice integration with very little effort and R&D required. Furthermore, even Vocollect certified partners who may not have the expertise and/or may not want to invest in R&D can take advantage of the Pigeon Voice Server.
 
-[[/Pigeon-Voice-Training.wiki/images/Pigeon-Voice-Stack.png]]
+[[/images/Pigeon-Voice-Stack.png]]
