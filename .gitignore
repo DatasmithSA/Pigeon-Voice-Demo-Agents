@@ -1,2 +1,4 @@
 source/trunk/Pigeon.Voice.Demo.Agents/Pigeon.Voice.Demo.Agents/obj/
 source/trunk/Pigeon.Voice.Demo.Agents/.vs/Pigeon.Voice.Demo.Agents/v15/.suo
+../.vs/Pigeon.Voice.Demo.Agents/v15/*
+Pigeon.Voice.Demo.Agents.csproj.user

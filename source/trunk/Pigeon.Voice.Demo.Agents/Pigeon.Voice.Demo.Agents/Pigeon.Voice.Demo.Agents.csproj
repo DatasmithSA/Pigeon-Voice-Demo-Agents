@@ -30,7 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Figlut.Server.Toolkit45">
+    <Reference Include="Figlut.Server.Toolkit45, Version=1.2.1.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\SDK\Figlut.Server.Toolkit.1.2.1.12.NET.4.5. 2018-06-01\Figlut.Server.Toolkit45.dll</HintPath>
     </Reference>
     <Reference Include="Pigeon.Voice.SDK, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">

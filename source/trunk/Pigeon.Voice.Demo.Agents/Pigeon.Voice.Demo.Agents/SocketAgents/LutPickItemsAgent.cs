@@ -35,7 +35,7 @@
                     p.QuantityToPick.ToString(),
                     p.QuantityToPick.ToString(), //Quantity remaining. Field used only on the device.
                     p.Description,
-                    p.QuantityPicked.HasValue ? p.QuantityPicked.Value.ToString() : 0.ToString(), //Field used only on the device.,
+                    p.QuantityPicked.HasValue ? p.QuantityPicked.Value.ToString() : 0.ToString(), //Field used only on the device.
                     p.PickStatusCode.HasValue ? p.PickStatusCode.ToString() : string.Empty //Field used only on the device.
                 }));
             }
