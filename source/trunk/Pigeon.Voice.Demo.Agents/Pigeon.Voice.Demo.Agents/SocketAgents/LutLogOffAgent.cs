@@ -4,12 +4,8 @@
 
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using Pigeon.Voice.SDK.AgentBase.TCP_IP;
     using Pigeon.Voice.SDK.Sockets.LUT;
-    using Pigeon.Voice.SDK.Sockets;
     using Pigeon.Voice.Demo.Agents.Data.DB;
 
     #endregion //Using Directives

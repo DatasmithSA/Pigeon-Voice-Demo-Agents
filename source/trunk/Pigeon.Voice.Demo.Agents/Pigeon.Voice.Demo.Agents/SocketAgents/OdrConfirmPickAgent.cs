@@ -3,10 +3,6 @@
     #region Using Directives
 
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using Pigeon.Voice.SDK.Sockets.ODR;
     using Pigeon.Voice.SDK.Sockets;
     using Pigeon.Voice.SDK.AgentBase.TCP_IP;
@@ -45,11 +41,11 @@
             sku = request[1];
             if (!int.TryParse(request[2], out quantityPicked))
             {
-                throw new Exception(string.Format("Pick list number {0} cannot be converted to an integer.", request[0]));
+                throw new Exception(string.Format("Quantity picked {0} cannot be converted to an integer.", request[2]));
             }
             if (!char.TryParse(request[3], out pickedStatusCode))
             {
-                throw new Exception(string.Format("Pick Status Code {0} cannot be converted to a character.", request[0]));
+                throw new Exception(string.Format("Pick Status Code {0} cannot be converted to a character.", request[3]));
             }
         }
 
