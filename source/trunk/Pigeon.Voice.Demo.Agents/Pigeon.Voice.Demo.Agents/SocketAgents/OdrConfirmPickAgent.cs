@@ -45,7 +45,7 @@
             }
             if (!char.TryParse(request[3], out pickedStatusCode))
             {
-                throw new Exception(string.Format("Pick Status Code {0} cannot be converted to a character.", request[3]));
+                throw new Exception(string.Format("Pick status code {0} cannot be converted to a character.", request[3]));
             }
         }
 
