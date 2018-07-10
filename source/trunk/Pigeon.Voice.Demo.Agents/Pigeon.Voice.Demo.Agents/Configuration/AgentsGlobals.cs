@@ -1,6 +1,5 @@
 ﻿namespace Pigeon.Voice.Demo.Agents.Configuration
 {
-    using Figlut.Server.Toolkit.Utilities;
     #region Using Directives
 
     using System;
@@ -8,6 +7,7 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using Figlut.Server.Toolkit.Utilities;
 
     #endregion //Using Directives
 
@@ -60,11 +60,5 @@
         }
 
         #endregion //Properties
-
-        #region Methods
-
-
-
-        #endregion //Methods
     }
 }

@@ -10,9 +10,7 @@ The **Pigeon Voice Training** repository provides source code samples, demo voic
 
 The **Pigeon Voice Server** provides an easy and flexible way to integrate Vocollect voice applications into any backend system (e.g. WMS, ERP etc.) without having to deal with the technical complexities and proprietary message formats of messages being sent to and from Vocollect devices. While the Pigeon Voice Server handles the messages to and from the Vocollect devices, an WMS/ERP integrator can simply focus on the integration into the backend WMS/ERP system without requiring extensive knowledge about Vocollect voice solutions. This is achieved by developing plugins on the Pigeon Voice server to handle the device requests by performing queries on the WMS/ERP system and populate the responses to the Vocollect Voice devices. These Pigeon Voice Server plugins are referred to as agents. The agents are developed by implementing the Pigeon Voice SDK and can be coded in any Microsoft .NET based programming language such as C# or VB.NET. Here's an example of a custom Pigeon Voice agent responding to a login request from a Vocollect device:
 
-`
-
-
+```C#
 
     public class LutLoginAgent : PVLutAgentBase
     {
@@ -32,7 +30,8 @@ The **Pigeon Voice Server** provides an easy and flexible way to integrate Vocol
             }
         }
     }
-`
+
+```
 
 **Voice technology stack overview:** 
 
