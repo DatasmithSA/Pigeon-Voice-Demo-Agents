@@ -1,7 +1,6 @@
 <Query Kind="Statements">
   <Connection>
     <ID>bee6923e-a5d3-4546-a9d1-c90af7442573</ID>
-    <Persist>true</Persist>
     <Server>PAULKOLOZSV38D1\MSSQLEXPRESS2012</Server>
     <Database>PigeonVoiceDemo</Database>
     <ShowServer>true</ShowServer>
@@ -14,13 +13,13 @@ Users.DeleteAllOnSubmit(Users);
 SubmitChanges();
 
 //Users
-User operatorId = new User() { UserId = Guid.NewGuid(), Username = "Operator.Id",Password = "1234",LoggedIn = false, DateCreated = DateTime.Now };
+User operatorId = new User() { UserId = Guid.NewGuid(), Username = "Operator.Id",Password = "123",LoggedIn = false, DateCreated = DateTime.Now };
 Users.InsertOnSubmit(operatorId);
 
-User paul = new User() { UserId = Guid.NewGuid(), Username = "paul",Password = "5678",LoggedIn = false, DateCreated = DateTime.Now };
+User paul = new User() { UserId = Guid.NewGuid(), Username = "Paul",Password = "123",LoggedIn = false, DateCreated = DateTime.Now };
 Users.InsertOnSubmit(paul);
 
-User nic = new User() { UserId = Guid.NewGuid(), Username = "nic",Password = "9012",LoggedIn = false, DateCreated = DateTime.Now };
+User nic = new User() { UserId = Guid.NewGuid(), Username = "Nic",Password = "123",LoggedIn = false, DateCreated = DateTime.Now };
 Users.InsertOnSubmit(nic);
 
 //Pick List 1
@@ -33,7 +32,7 @@ PickItem item1 = new PickItem()
 	PickListId = list1.PickListId,
 	Sku = "SK01",
 	Location = "L01",
-	CheckDigits = "012",
+	CheckDigits = "212",
 	QuantityToPick = 10,
 	Description = "Chicken Wings",
 	QuantityPicked = null,
@@ -49,7 +48,7 @@ PickItem item2 = new PickItem()
 	PickListId = list1.PickListId, 
 	Sku = "SK02",
 	Location = "L02",
-	CheckDigits = "013",
+	CheckDigits = "213",
 	QuantityToPick = 11,
 	Description = "Beef Patties",
 	QuantityPicked = null,
@@ -67,7 +66,7 @@ PickItem item3 = new PickItem()
 	PickListId = list1.PickListId, 
 	Sku = "SK03",
 	Location = "L03",
-	CheckDigits = "014",
+	CheckDigits = "214",
 	QuantityToPick = 12,
 	Description = "Lettuce",
 	QuantityPicked = null,
@@ -83,7 +82,7 @@ PickItem item4 = new PickItem()
 	PickListId = list1.PickListId, 
 	Sku = "SK04",
 	Location = "L04",
-	CheckDigits = "015",
+	CheckDigits = "215",
 	QuantityToPick = 13,
 	Description = "Potato",
 	QuantityPicked = null,

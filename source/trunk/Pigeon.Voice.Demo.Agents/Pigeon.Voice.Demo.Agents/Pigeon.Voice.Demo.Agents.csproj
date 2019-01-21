@@ -33,14 +33,17 @@
     <Reference Include="Figlut.Server.Toolkit45, Version=1.2.1.12, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\SDK\Figlut.Server.Toolkit.1.2.1.12.NET.4.5. 2018-06-01\Figlut.Server.Toolkit45.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Pigeon.Voice.SDK, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\SDK\Pigeon.Voice.SDK.1.0.2-2018-06-13\Pigeon.Voice.SDK.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Pigeon.Voice.SDK.WinForms.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\SDK\Pigeon.Voice.SDK.1.0.2-2018-06-13\Pigeon.Voice.SDK.WinForms.Base.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -90,6 +93,7 @@
   <ItemGroup>
     <Content Include="AgentsSettings.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
